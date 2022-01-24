@@ -1,5 +1,3 @@
-from tkinter.tix import Tree
-
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql.expression import text

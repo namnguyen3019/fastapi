@@ -3,8 +3,6 @@ from typing import Optional
 
 from pydantic import BaseModel, EmailStr, conint
 
-from app.database import Base
-
 
 class UserBase(BaseModel):
     email: EmailStr
