@@ -47,13 +47,21 @@ Interact with api routes in this [link][link](https://api-with-fastapi.herokuapp
 1. Clone this repository
 2. Setup `.evn` file and fill with your database information
 
-DATABASE_HOSTNAME = hostname
-DATABASE_PORT = 1234
-DATABASE_NAME = name
-DATABASE_USERNAME= username
-DATABASE_PASSWORD = password
-SECRETE_KEY = KEY
-ALGORITHM = HS256
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+DATABASE_HOSTNAME = hostname 
+
+DATABASE_PORT = 1234 
+
+DATABASE_NAME = name 
+
+DATABASE_USERNAME= username 
+
+DATABASE_PASSWORD = password 
+
+SECRETE_KEY = KEY 
+
+ALGORITHM = HS256  
+
+ACCESS_TOKEN_EXPIRE_MINUTES = 30 
+
 
 3. Run `uvicorn app.main:app --reload` in the folder terminal
