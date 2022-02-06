@@ -5,39 +5,37 @@ This project has been deployed on heroku
 
 ## Project description
 
-This project is simple version of social network which has users, posts and votes(likes).
+This project is simple version of social network which has `users`, `posts` and `votes`(likes).
 
-1.  Database: There are three table: users, posts, votes
+1.  Database: There are three table: `users`, `posts`, `votes`
 
 1.1 Users
-                                        Table "public.users"
-    Column    |           Type           | Collation | Nullable |              Default              
---------------+--------------------------+-----------+----------+-----------------------------------
- id           | integer                  |           | not null | nextval('users_id_seq'::regclass)
- email        | character varying        |           | not null | 
- password     | character varying        |           | not null | 
- created_at   | timestamp with time zone |           |          | now()
- phone_number | character varying        |           |          | 
+
+                            |   Column     |           Type          |
+                            |:------------:|:------------------------|
+                            | id           | integer                 |
+                            | email        | character varying       |
+                            | password     | character varying       |
+                            | created_at   | timestamp with time zone|
+                            | phone_number | character varying       |
 
 1.2 Posts
 
-                                       Table "public.posts"
-   Column   |           Type           | Collation | Nullable |              Default              
-------------+--------------------------+-----------+----------+-----------------------------------
- id         | integer                  |           | not null | nextval('posts_id_seq'::regclass)
- title      | character varying        |           | not null | 
- content    | character varying        |           | not null | 
- owner_id   | integer                  |           | not null | 
- published  | boolean                  |           | not null | true
- created_at | timestamp with time zone |           |          | now()
+                            |   Column   |           Type           |     
+                            |:-----------| :------------------------|
+                            |id          | integer                  |
+                            | title      | character varying        |
+                            | content    | character varying        |
+                            | owner_id   | integer                  |
+                            | published  | boolean                  |
+                            | created_at | timestamp with time zone |
 
 1.3
 
-                 Table "public.votes"
- Column  |  Type   | Collation | Nullable | Default 
----------+---------+-----------+----------+---------
- user_id | integer |           | not null | 
- post_id | integer |           | not null | 
+                                    | Column  |  Type   |
+                                    |:--------|:--------|
+                                    | user_id | integer |
+                                    | post_id | integer |
 
 
 2. Routes:
@@ -47,15 +45,15 @@ Interact with api routes in this [link][link](https://api-with-fastapi.herokuapp
 ## How to run
 
 1. Clone this repository
-2. Setup .evn file and fill with your database information
+2. Setup `.evn` file and fill with your database information
 
-DATABASE_HOSTNAME = localhost
-DATABASE_PORT = 5432
-DATABASE_NAME = fastapi
-DATABASE_USERNAME= user
-DATABASE_PASSWORD = 123456
-SECRETE_KEY = 
-ALGORITHM = 
-ACCESS_TOKEN_EXPIRE_MINUTES = 
+DATABASE_HOSTNAME = hostname
+DATABASE_PORT = 1234
+DATABASE_NAME = name
+DATABASE_USERNAME= username
+DATABASE_PASSWORD = password
+SECRETE_KEY = KEY
+ALGORITHM = HS256
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 3. Run `uvicorn app.main:app --reload` in the folder terminal
